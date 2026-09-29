@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="430" viewBox="0 0 1440 430" role="img" aria-labelledby="title desc">
+  <title id="title">Isaac Sim and Isaac Lab</title>
+  <desc id="desc">A stylized robotic arm and simulation grid on a dark technical background.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101820"/>
+      <stop offset="1" stop-color="#172a31"/>
+    </linearGradient>
+    <linearGradient id="arm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d6e3e1"/>
+      <stop offset="1" stop-color="#81999a"/>
+    </linearGradient>
+    <pattern id="grid" width="46" height="46" patternUnits="userSpaceOnUse" patternTransform="skewY(-20)">
+      <path d="M46 0H0V46" fill="none" stroke="#63d471" stroke-opacity=".12" stroke-width="1"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1440" height="430" rx="24" fill="url(#bg)"/>
+  <rect width="1440" height="430" rx="24" fill="url(#grid)"/>
+  <path d="M0 338 520 245 965 308 1440 203V430H0Z" fill="#0b1218" opacity=".66"/>
+  <path d="M0 338 520 245 965 308 1440 203" fill="none" stroke="#71df7d" stroke-opacity=".38" stroke-width="2"/>
+  <g fill="none" stroke="#66d777" stroke-width="2" opacity=".66">
+    <path d="M910 90h245v114h170"/>
+    <path d="M1008 68v35h96"/>
+    <path d="M930 265h120v-38h80"/>
+  </g>
+  <g fill="#70e082" filter="url(#glow)">
+    <circle cx="910" cy="90" r="4"/><circle cx="1325" cy="204" r="4"/>
+    <circle cx="1008" cy="68" r="4"/><circle cx="1130" cy="227" r="4"/>
+  </g>
+  <g transform="translate(940 42)">
+    <ellipse cx="217" cy="322" rx="187" ry="25" fill="#03070a" opacity=".55"/>
+    <path d="M142 299h153l25 25H117z" fill="#718689"/>
+    <path d="M160 287h117v20H160z" fill="#a7b7b6"/>
+    <circle cx="216" cy="254" r="42" fill="#26383d" stroke="#9ab0ad" stroke-width="5"/>
+    <circle cx="216" cy="254" r="13" fill="#67db78"/>
+    <path d="m192 225-42-97 40-18 54 94" fill="none" stroke="#0d1519" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="m192 225-42-97 40-18 54 94" fill="none" stroke="url(#arm)" stroke-width="27" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="170" cy="116" r="25" fill="#24383c" stroke="#afc1be" stroke-width="5"/>
+    <circle cx="170" cy="116" r="8" fill="#69df7b"/>
+    <path d="m184 99 82-47 20 29-79 52" fill="none" stroke="#0d1519" stroke-width="31" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="m184 99 82-47 20 29-79 52" fill="none" stroke="url(#arm)" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="276" cy="66" r="20" fill="#26383d" stroke="#b5c4c1" stroke-width="5"/>
+    <path d="m290 60 29-14m-28 27 29 14" stroke="#d7e2df" stroke-width="7" stroke-linecap="round"/>
+    <path d="m320 46 15-8m-15 49 16 8" stroke="#69df7b" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <text x="82" y="131" fill="#75e284" font-size="18" font-weight="700" letter-spacing="4">ROBOTICS SIMULATION · LAB SETUP</text>
+    <text x="78" y="211" fill="#f1f6f3" font-size="61" font-weight="750" letter-spacing="-2">Isaac Sim</text>
+    <text x="78" y="278" fill="#f1f6f3" font-size="61" font-weight="750" letter-spacing="-2">+ Isaac Lab</text>
+    <rect x="82" y="314" width="58" height="5" rx="2.5" fill="#70df7f"/>
+    <text x="82" y="358" fill="#aabbb8" font-size="21" font-weight="450">Installation guide for Linux and Windows</text>
+  </g>
+</svg>

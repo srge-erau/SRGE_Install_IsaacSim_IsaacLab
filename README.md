@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/isaac-lab-banner.svg" alt="Isaac Sim and Isaac Lab robotics simulation banner" width="100%">
+</p>
+
 # Install NVIDIA Isaac Sim 6.0 and Isaac Lab
 
 This guide is for new lab members setting up a local workstation on **Ubuntu Linux** or **Windows 10/11**. It installs Isaac Sim 6.0.0 and the matching Isaac Lab 3.0 beta using the Isaac Sim Python package and the Isaac Lab source repository.
@@ -11,6 +15,55 @@ This guide is for new lab members setting up a local workstation on **Ubuntu Lin
 - Install Git and `uv` (the Python environment/package manager used in the commands below). See [uv installation](https://docs.astral.sh/uv/getting-started/installation/) and [Git downloads](https://git-scm.com/downloads).
 - Use a stable internet connection for the Python packages and simulation assets.
 - On Windows, use a short path without spaces, for example `C:\lab\IsaacLab`.
+
+## Remove an old Isaac Sim or Isaac Lab install
+
+There is no single uninstaller for every install method. First close Isaac Sim and any training processes. **Keep a copy of projects, USD scenes, checkpoints, and custom assets you need.** Delete only the folders you recognize as belonging to your old install; do not run broad wildcard deletion commands.
+
+### Isaac Lab source checkout and Python environment
+
+The Isaac Lab checkout is just a Git folder, and the `env_isaaclab` folder is its Python environment. Remove each separately when you no longer need it.
+
+**Linux:**
+
+```bash
+# From the parent directory, replace IsaacLab with the actual checkout folder name
+rm -rf IsaacLab
+
+# Remove the environment only if it is the one created for Isaac Lab
+rm -rf ~/env_isaaclab
+```
+
+**Windows (PowerShell):**
+
+```powershell
+# Review the path first; these commands permanently remove the folders
+Remove-Item -Recurse -Force .\IsaacLab
+Remove-Item -Recurse -Force "$HOME\env_isaaclab"
+```
+
+If you installed Isaac Sim through `uv` in a different environment, remove that exact environment folder after checking its path. If the environment contains other projects, keep it and uninstall only the packages from that environment instead.
+
+### Standalone Isaac Sim archive install
+
+If you installed from the standalone ZIP, remove the extracted install directory (for example `~/isaacsim` on Linux or `C:\isaacsim` on Windows) after confirming it contains only that Isaac Sim installation. Also remove the downloaded ZIP if you no longer need it. This does not remove a separate Python package installation or projects stored elsewhere.
+
+### Isaac Sim and Omniverse caches (optional)
+
+Caches can be rebuilt and may take time to download or regenerate. Remove them only when troubleshooting corrupted cache data or reclaiming space. You can inspect the folders first and delete only Isaac Sim-related cache directories.
+
+- **Linux:** check `~/.cache/ov` and `~/.local/share/ov`.
+- **Windows:** check `%LOCALAPPDATA%\\ov` and `%USERPROFILE%\\.cache\\ov`.
+
+These folders may be shared by multiple Omniverse applications. Do not delete the entire parent folder if another NVIDIA application or project uses it. Refer to NVIDIA's [setup tips](https://docs.isaacsim.omniverse.nvidia.com/6.0.0/installation/install_faq.html) if you are unsure which cache to clear.
+
+For a Python-package install, activate the specific environment and inspect installed Isaac Sim packages before uninstalling:
+
+```bash
+python -m pip list | grep -i isaacsim
+```
+
+Then uninstall only the Isaac Sim packages from that environment using `python -m pip uninstall isaacsim isaacsim-core isaacsim-app` if those exact package names are listed. Package names can differ by release; review the list and confirm each prompt. Do not uninstall packages from a shared environment without checking with its owner.
 
 ## 1. Create a Python environment and install Isaac Sim
 
