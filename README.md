@@ -170,8 +170,8 @@ For unresolved issues, save the full terminal output, note your OS, GPU model, d
 
 ## Official references
 
-- [Isaac Sim 6.0 installation overview](https://docs.isaacsim.omniverse.nvidia.com/6.0.0/installation/index.html)
-- [Isaac Sim 6.0 quick install](https://docs.isaacsim.omniverse.nvidia.com/6.0.0/installation/quick-install.html)
-- [Isaac Sim 6.0 requirements](https://docs.isaacsim.omniverse.nvidia.com/6.0.0/installation/requirements.html)
+- [Isaac Sim 6.0 installation overview](https://docs.isaacsim.omniverse.nvidia.com/6.1.0/installation/index.html)
+- [Isaac Sim 6.0 quick install](https://docs.isaacsim.omniverse.nvidia.com/6.1.0/installation/quick-install.html)
+- [Isaac Sim 6.0 requirements](https://docs.isaacsim.omniverse.nvidia.com/6.1.0/installation/requirements.html)
 - [Isaac Lab 3.0 beta quickstart](https://isaac-sim.github.io/IsaacLab/v3.0.0-beta/source/setup/quickstart.html)
 - [Isaac Lab 3.0 beta installation options](https://isaac-sim.github.io/IsaacLab/v3.0.0-beta/source/setup/installation/index.html)
